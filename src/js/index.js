@@ -39,7 +39,10 @@ async function getInfo() {
     let user = await getUser();
     throw new Error('error');
 }
+try {
+    getInfo()
+} catch (e) {
+    console.error(e)
+}
 
-getInfo()
-    .catch(err => console.error(err))
 
